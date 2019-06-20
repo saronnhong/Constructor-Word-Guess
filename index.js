@@ -1,7 +1,7 @@
 var inquirer = require("inquirer");
 var Word = require("./Word");
 
-var gotDictArray = ["hodor", "arya", "robb", "jonsnow", "sansa", "eddard", "catelyn", "theon", "rickon", "tyrion", "jaime", "cersei", "tywin", "robin", "aegon", "maegor", "jaehaerys", "viserys", "daeron", "baelor", "aerys", "nymeria", "ghost", "summer", "shaggydog", "greywind", "lady", "joffrey", "khaldrogo", "daenerys", "hotpie", "gendry", "melisandre", "stannis", "lysa", "oldnan", "renly", "myrcella", "gregor", "sandor", "jeynepoole", "bran", "samwell", "coldhands"];
+var gotDictArray = ["spiderman", "greengoblin", "blackcat", "peterparker", "spidergwen", "kingpin", "vulture", "rhino", "venom", "carnage"];
 var chosenWord = gotDictArray[Math.floor(Math.random() * gotDictArray.length)];
 let word = new Word(chosenWord);
 let guessesLeft = 5;
@@ -24,6 +24,7 @@ function startGame() {
             let correctCheck = word.iterateGuess(response.letterGuessed);
             let endGameCheck = word.displayWord();
             if (endGameCheck === 0) {
+                
                 console.log("You Got It Right! Next Word");
                 score++;
                 console.log("Score: " + score);
