@@ -40,21 +40,14 @@ function Word(wordInput) {
             }
         }
         if (correctCount === 0) {
-            console.log("INCORRECT!");
+            console.log("INCORRECT!\n");
             return 0;
         } else {
-            console.log("CORRECT!!!!");
+            console.log("CORRECT!!!!\n");
             return 1;
         }
     };
 
 }
-
-// let word = new Word("dog");
-// word.wordCreate();
-// word.iterateGuess(process.argv[2]);
-// word.displayWord();
-
-
 
 module.exports = Word;

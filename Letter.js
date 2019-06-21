@@ -22,9 +22,3 @@ function Letter(value, guess){
     };
 }
 module.exports = Letter;
-
-// let letter = new Letter("a");
-
-// letter.guessUpdate(process.argv[2]);
-// letter.displayChar();
-// console.log(letter.guess);
