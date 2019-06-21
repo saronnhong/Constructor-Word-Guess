@@ -20,6 +20,7 @@ function Word(wordInput) {
         }
         let emptySpaceCheck = displayWordArray.indexOf("_ ");
         if(emptySpaceCheck === -1){
+            console.log(displayWordArray.join(" "));
             return 0;
         }
         console.log(displayWordArray.join(" "));
@@ -34,7 +35,7 @@ function Word(wordInput) {
         let correctCount = 0;
         for (var i = 0; i < correctCheck.length; i++) {
             if (correctCheck[i] === true) {
-                console.log("CORRECT!!!!");
+                
                 correctCount++;
             }
         }
@@ -42,16 +43,18 @@ function Word(wordInput) {
             console.log("INCORRECT!");
             return 0;
         } else {
+            console.log("CORRECT!!!!");
             return 1;
         }
     };
 
 }
+
 // let word = new Word("dog");
 // word.wordCreate();
 // word.iterateGuess(process.argv[2]);
 // word.displayWord();
-//console.log(word.word);
+
 
 
 module.exports = Word;

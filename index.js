@@ -1,8 +1,8 @@
 var inquirer = require("inquirer");
 var Word = require("./Word");
 
-var gotDictArray = ["spiderman", "greengoblin", "blackcat", "peterparker", "spidergwen", "kingpin", "vulture", "rhino", "venom", "carnage"];
-var chosenWord = gotDictArray[Math.floor(Math.random() * gotDictArray.length)];
+var spiderDictArray = ["spiderman", "greengoblin", "blackcat", "peterparker", "spidergwen", "kingpin", "vulture", "rhino", "venom", "carnage", "milesmorales","spiderham", "maryjanewatson", "uncleben","auntmay","sandman","doctoroctopus","mysterio","kraven","shocker","electro","hobgoblin","antivenom","prowler"];
+var chosenWord = spiderDictArray[Math.floor(Math.random() * gotDictArray.length)];
 let word = new Word(chosenWord);
 let guessesLeft = 5;
 var score = 0;
@@ -28,7 +28,7 @@ function startGame() {
                 console.log("You Got It Right! Next Word");
                 score++;
                 console.log("Score: " + score);
-                var chosenWord = gotDictArray[Math.floor(Math.random() * gotDictArray.length)];
+                var chosenWord = spiderDictArray[Math.floor(Math.random() * gotDictArray.length)];
                 word = new Word(chosenWord);
                 word.wordCreate();
                 word.displayWord();
